@@ -9,8 +9,12 @@ import SwiftUI
 
 struct DetailEditView: View {
     @State private var scrum: DailyScrum = DailyScrum.emptyScrum
+    @State private var newAttendeeName = ""
     var body: some View {
         Form {
+            /**
+             $scrum is used for two-way binding, allowing changes in the UI to update the underlying data, while scrum without the $ sign is used to access the current value of the state property.
+             */
             Section(header: Text("Meeting Info")) {
                 TextField("Title",text: $scrum.title)
                 HStack {
@@ -23,6 +27,28 @@ struct DetailEditView: View {
                     }
                     Spacer()
                     Text("\(scrum.lengthInMinutes) Minutes")
+                }
+            }
+            Section(header:Text("Attendees")){
+                ForEach(scrum.attendees) { attendee in
+                    Text(attendee.name)
+                }
+                .onDelete { indices in
+                    scrum.attendees.remove(atOffsets: indices)
+                }
+                HStack {
+                    TextField("New Attendee", text: $newAttendeeName)
+                    Button {
+                        withAnimation {
+                            let attendee = DailyScrum.Attendee(name: newAttendeeName)
+                            scrum.attendees.append(attendee)
+                            newAttendeeName = ""
+                        }
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                    }
+                    .disabled(newAttendeeName.isEmpty)
+                    
                 }
             }
         }
