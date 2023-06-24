@@ -13,6 +13,7 @@
 		092614332A3737F4001A6E9A /* MeetingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092614322A3737F4001A6E9A /* MeetingFooterView.swift */; };
 		092614352A373BAC001A6E9A /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092614342A373BAC001A6E9A /* AVPlayer+Ding.swift */; };
 		0926143A2A37432F001A6E9A /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 092614392A37432F001A6E9A /* ding.wav */; };
+		092A3CE62A46FDC300BE5B41 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A3CE52A46FDC300BE5B41 /* SpeechRecognizer.swift */; };
 		096927AE2A35C9C50088C94A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096927AD2A35C9C50088C94A /* DetailView.swift */; };
 		096927B02A35E19E0088C94A /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096927AF2A35E19E0088C94A /* DetailEditView.swift */; };
 		096927B22A35F57F0088C94A /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096927B12A35F57F0088C94A /* ThemeView.swift */; };
@@ -43,6 +44,7 @@
 		092614322A3737F4001A6E9A /* MeetingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingFooterView.swift; sourceTree = "<group>"; };
 		092614342A373BAC001A6E9A /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
 		092614392A37432F001A6E9A /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
+		092A3CE52A46FDC300BE5B41 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		096927AD2A35C9C50088C94A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		096927AF2A35E19E0088C94A /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		096927B12A35F57F0088C94A /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				097C88072A3DD2A3000EB95C /* History.swift */,
 				097C88092A3DE2CB000EB95C /* ScrumStore.swift */,
 				0987C0552A3F23C30096E727 /* ErrorWrapper.swift */,
+				092A3CE52A46FDC300BE5B41 /* SpeechRecognizer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				096927AE2A35C9C50088C94A /* DetailView.swift in Sources */,
 				0926142D2A372895001A6E9A /* MeetingHeaderView.swift in Sources */,
 				096927B02A35E19E0088C94A /* DetailEditView.swift in Sources */,
+				092A3CE62A46FDC300BE5B41 /* SpeechRecognizer.swift in Sources */,
 				097C88062A3DCBD2000EB95C /* EditScrumSheet.swift in Sources */,
 				099ECCEB2A34A83500B4A031 /* TrailingIconLabelStyle.swift in Sources */,
 				0987C05C2A3F35310096E727 /* SpeakerArc.swift in Sources */,
@@ -375,6 +379,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Scrumdinger/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -411,6 +416,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Scrumdinger/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
